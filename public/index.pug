@@ -1,0 +1,144 @@
+doctype html
+html(lang='en')
+    head 
+        meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+        link(rel="stylesheet", href="../assets/font-awesome/css/font-awesome.css")
+        link(rel='stylesheet', href='../assets/css/bootstrap.css')
+        link(rel='stylesheet', href='../assets/css/style.css')
+    body
+        .navbar.navbar-expand-md.navbar-dark.bg-dark
+            .container-fluid
+                a(href='index.html') 
+                    img(src='../assets/img/netFlix.png')
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#nav', aria-controls='navbarsExample04' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                .collapse.navbar-collapse#nav
+                    ul.navbar-nav.me-auto.mb-2.mb-md-0
+                        span.dot#dot
+                        li.nav-item 
+                            a.nav-link(href='#', aria-current='page') Home 
+                        li.nav-item 
+                            a.nav-link(href='#') Movies  
+                        li.nav-item 
+                            a.nav-link(href='#') Series 
+                        li.nav-item.dropdown
+                            a.nav-link.dropdown-toggle#drop(href='#', data-bs-toggle='dropdown', aria-expanded='false') my films 
+                            ul.dropdown-menu(aria-labelledby='drop')
+                                li
+                                    a.dropdown-item(href="#") Jumanji
+                                    a.dropdown-item(href="#") Bladshoot
+                                    a.dropdown-item(href="#") Thor 2 
+                        li.nav-Item
+                            .search-content 
+                                input#search(placeholder='search anything',type="text")
+                                a.nav-link 
+                                    i.fa.fa-search(role='button')
+        .display-full
+            .container
+                .row 
+                    .col-sm-12.col-md-12.col-lg-6
+                        p.t-w 
+                            |Duration 
+                            span#dur 119 M
+                            span#rating 
+                                i.fa.fa-star.t-y(style='color:yellow')
+                                |  6.8  
+                        h1.t-w.t-bg.t-h
+                            |Thor 2
+                        p.t-d.t-w.mt-2
+                            |Four Teenagers Find Themselves In The Deadly World Of A Video Game, And Even Everyone Has A New Unusual Body 
+                        .row 
+                            .col-sm-12.col-lg-6.col-md-6 
+                                a.st-btn.bg-warn(style='background: #E10914 !important',role='button')  
+                                    i.fa.fa-play
+                                    |  Watch
+                            .col-sm-12.col-lg-6.col-md-6 
+                                a.st-btn.bg-dark(style='background: #000100 !important', role='button')
+                                    i.fa.fa-plus
+                                    |   Add List
+        .container-fluid.m
+            section.container.l
+
+                .row.first
+                    .col-sm-12.col-md-6.col-lg-3.t-l
+                        spant.t-w 
+                            |   Trends Now
+                    .col-sm-12.col-md-6.col-lg-3
+                        span.t-w
+                            i.fa.fa-fire 
+                            |   Popular
+                    .col-sm-12.col-md-6.col-lg-3
+                        spant.t-w
+                            i.fa.fa-star
+                            |   Premieres
+                    .col-sm-12.col-md-6.col-lg-3.t-r
+                        spant.t-w.t-l
+                            i.fa.fa-plus
+                            |   Recently Added
+                .row.second
+                    div
+                        span Action            
+                    div
+                        span Adventure            
+                    div
+                        span Animation            
+                    div
+                        span Biography            
+                    div
+                        span Crime            
+                    div
+                        span Comedy            
+                    div
+                        span Document            
+                    div
+                        span Drama            
+                    div
+                        span Fantastic            
+                    div
+                        span Scientific            
+                    div
+                        span Trend            
+                    div
+                        span Marvel
+                - 
+                    const employees = [
+                            {
+                                name: 'Maze Runner',
+                                year: 2016,
+                                rating: 6.3,
+                                img: ''
+                            },
+                            {
+                                name: 'Some',
+                                year: 21213,
+                                rating: 8,
+                                img:''
+                            },
+                            {
+                                name: 'Red Sponse',
+                                year: 213,
+                                rating: 2,
+                                img: ''
+                            },
+                            {
+                                name: 'some',
+                                year: 1123,
+                                rating: 5,
+                                img: ''
+                            }
+                    ]
+                .row.d
+                    each employee, i in employees
+                        .col-lg-3.col-sm-12.col-md-6
+                            .card
+                                .card-body
+                                    h6.title
+                                        |#{employees[i].name}
+                                    p.year.text-muted
+                                        |#{employees[i].year}
+
+
+        script(src="../assets/js/strange.js")
+        script(src="../assets/js/main.js")
+        script(src="../assets/js/bootstrap.bundle.js")
+
