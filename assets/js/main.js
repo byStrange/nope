@@ -31,46 +31,10 @@ dropLinks.forEach(element => {
 })
 
 window.on('click', function (e) {
-    // if (!($('ul.dropdown-menu').className.toString().indexOf('show') > -1)) {
-    //     const a = document.querySelectorAll('.nav-link');
-    //     let th;
-    //     for (l = 0; l < a.length; l++) {
-    //         if (e.target == a[l]) {
-    //             th = true
-    //         }
-    //     }
-    //     if (!th) {
-    //         $dot.css({
-    //             top: '90%',
-    //             left: li[li.length - 1].offsetLeft + li[li.length - 1].width() / 2 + 'px',
-    //             opacity: 1
-    //         })
-    //     }
-    // }
     $dot.css({
         opacity: 0
     })
 })
-
-/* 
-    const a = document.querySelectorAll('.nav-link');
-    let th;
-    for (l = 0; l < a.length; l++) {
-        if (e.target == a[l]) {
-            console.log(li[0].children[0])
-            console.log('___________')
-            console.log(e.target)
-            th = true
-        }
-    }
-    if (!th) {
-        $dot.css({
-            top: '90%',
-            left: li[li.length - 1].offsetLeft + li[li.length - 1].width() / 2 + 'px',
-            opacity: 1
-        })
-    }
-*/
 let x = 0
 let me
 $('.row.second').on('mouseenter', moveLeft)
@@ -86,3 +50,9 @@ function moveLeft(e) {
         moveLeft(e)
     }, 150)
 }
+
+document.querySelectorAll('.row.second div').forEach(they => {
+    they.onclick = function() {
+        they.toggle('active')
+    }
+})

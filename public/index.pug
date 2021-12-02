@@ -100,6 +100,9 @@ html(lang='en')
                         span Trend            
                     div
                         span Marvel
+                    span#moveLeft
+                    span#moveRight
+
                 - 
                     const employees = [
                             {
@@ -125,17 +128,128 @@ html(lang='en')
                                 year: 1123,
                                 rating: 5,
                                 img: ''
+                            },
+                            {
+                                name: 'Hello world',
+                                year: 2016,
+                                rating: 6.3,
+                                img: ''
+                            },
+                            {
+                                name: 'Another Film',
+                                year: 21213,
+                                rating: 8,
+                                img:''
+                            },
+                            {
+                                name: 'Do not watch',
+                                year: 213,
+                                rating: 2,
+                                img: ''
+                            },
+                            {
+                                name: 'shut up',
+                                year: 1123,
+                                rating: 5,
+                                img: ''
                             }
                     ]
                 .row.d
                     each employee, i in employees
                         .col-lg-3.col-sm-12.col-md-6
                             .card
+                                .card-head
+                                    img(src=`${employees[i].img}`)
                                 .card-body
                                     h6.title
                                         |#{employees[i].name}
-                                    p.year.text-muted
-                                        |#{employees[i].year}
+                                    div.year.text-muted.row
+                                        .col-6
+                                            span(style='margin-left: 0') #{employees[i].year}   
+                                        .col-6
+                                            span.fa.fa-heart    
+                                            span.fa.fa-eye  
+                                            span.fa.fa-star   #{employees[i].rating}
+        // Footer
+        footer.text-lg-start.bg-dark.text-muted
+          section.d-flex.justify-content-center.justify-content-lg-between.p-4.border-bottom
+            .me-5.d-none.d-lg-block
+              span Get connected with us on social networks:
+            div
+              a.me-4.text-reset(href='')
+                i.fa.fa-facebook-f
+              a.me-4.text-reset(href='')
+                i.fa.fa-twitter
+              a.me-4.text-reset(href='')
+                i.fa.fa-google
+              a.me-4.text-reset(href='')
+                i.fa.fa-instagram
+              a.me-4.text-reset(href='')
+                i.fa.fa-linkedin
+              a.me-4.text-reset(href='')
+                i.fa.fa-github
+          section
+            .container.text-md-start.mt-5
+              .row.mt-3
+                .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+                  h6.text-uppercase.fw-bold.mb-4.text-left
+                    | Locations
+                  ul.navbar-nav
+                    li.nav-item
+                        a.nav-link Berkley mission bay
+                    li.nav-item
+                        a.nav-link Berkley takapuna
+                    li.nav-item
+                        a.nav-link HOYTS botany downs
+                    li.nav-item
+                        a.nav-link HOYTS northlands
+                    
+                .col-md-2.col-lg-2.col-xl-2.mx-auto.mb-4
+                  h6.text-uppercase.fw-bold.mb-4.text-left
+                    | What's bot
+                  ul.navbar-nav
+                    li.nav-item
+                        a.nav-link All movies
+                    li.nav-item
+                        a.nav-link Movies by Genre
+                    li.nav-item
+                        a.nav-link Latest release
+                    li.nav-item
+                        a.nav-link Coming soon
+                .col-md-3.col-lg-2.col-xl-2.mx-auto.mb-4
+                  h6.text-uppercase.fw-bold.mb-4.text-left
+                    | Offers
+                  ul.navbar-nav
+                    li.nav-item
+                        a.nav-link Event & competition
+                    li.nav-item
+                        a.nav-link About Us
+                    li.nav-item
+                        a.nav-link HOYTS rewards card
+                    li.nav-item
+                        a.nav-link Screen experience
+                    li.nav-item
+                        a.nav-link Movie festival
+                    li.nav-item
+                        a.nav-link E-gift card
+                .col-md-4.col-lg-3.col-xl-3.mx-auto.mb-md-0.mb-4
+                  h6.text-uppercase.fw-bold.mb-4.text-left
+                    | Download our app
+                  ul.navbar-nav(style='width: 100% !important;')
+                    .row(style='height: 50px')
+                        .col-6
+                            a
+                                img(src='#')
+                        .col-6
+                            a
+                                img(src='#')
+                    p.mt-5
+                        |Subscribe to our newsletter
+                    p.magic-parent
+                        input.magic-input(type='text', placeholder='enter your email')
+                        input.magic-btn(value='send', type='submit')
+
+
 
 
         script(src="../assets/js/strange.js")

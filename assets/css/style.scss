@@ -8,6 +8,7 @@ body {
     background-image: linear-gradient(#000101, #000300);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Gilroy;
 }
 
 input:focus,
@@ -190,11 +191,17 @@ li.nav-Item {
         }
     }
 }
+.fa-star {
+    color: yellow !important; 
+}
+.fa-heart.liked{
+    color: red !important;
+}
 .container-fluid.m {
     background: #16151a ;
 }
 section.container.l {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 30px;
     .row.first {
         position: relative;
@@ -221,22 +228,120 @@ section.container.l {
         flex-wrap: nowrap;
         justify-content: space-between !important;  
         overflow: hidden;
-            div {
-                padding: 5px 10px;
-                text-align: center;
-                border-radius: 20px;
-                font-size: 14px;
-                width: 100px !important;
-                background:#2e2d32; 
-                margin-left: 15px;
-                span {
-                    color: #fff;
-                    font-family: Gilroy
-                }
+        position: relative;
+        div {
+            padding: 5px 10px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 14px;
+            width: 100px !important;
+            background:#2e2d32; 
+            margin-left: 15px;
+            cursor: pointer;
+            user-select: none;
+            &.active {
+                background: #E10914;
+            }
+            span {
+                color: #fff;
+                font-family: Gilroy
+            }
         }
+        span#moveLeft {
+            position: absolute;
+            width: 15px;
+            height: 100%;
+            border: 1px solid red
+        }
+        span#moveRight {
+            position: absolute;
+            width: 15px;
+            height: 100%;
+            border: 1px solid #000;
+        }
+
     }
     .row.d{
         margin-top: 50px;
+        .col-lg-3.col-sm-12.col-md-6{
+            margin-bottom: 70px;
+            .card {
+                height: 400px;
+                background:transparent !important;
+                .card-head {
+                    height: 80%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .card-body {
+                    height: 20%;
+                    h6.title {
+                        color: #fff
+                    }
+                    .col-6 {
+                        span {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+   ul {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+        li {
+            text-align: justify !important;
+            a{
+                cursor: pointer !important;
+                color: gray;
+            }
+        }
+    }
+    .magic-parent {
+        position: relative;
+        width: 100%;
+        .magic-input {
+            width: 100% !important;
+            height: 20px;
+            background:transparent !important;
+            border: 1px solid var(--bs-gray);
+            opacity: .9;
+            border-radius: 30px;
+            padding: 30px 20px !important;
+            &:placeholder {
+                color: rgba(255,255,255,.3);
+                font-size: 13px !important;
+            }
+            &:focus {
+                opacity: 1;
+                color: rgba(130,130,130,1);
+            }
+            color: gray;
+        }
+        .magic-btn {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 81%;
+            transform: translate(-50%,-50%);
+            border: none;
+            color: #fff;
+            padding: 10px 23px;
+            background:rgb(228, 69, 58);
+            border-radius: 30px;
+            transition: 150ms;
+            &:hover {
+                box-shadow: 0px 0px 10px  rgba(255, 50 ,20, .7);
+                transform:translate(-50%,-50%) scale(1.125, 1.125) 
+            }
+        }
     }
 }
 
