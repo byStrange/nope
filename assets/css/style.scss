@@ -4,10 +4,10 @@
 }
 
 body {
-    // background-image: url('../img/thor.png');
-    background-image: linear-gradient(#000101, #000300);
+    /*background-image: url('../img/thor.png');*/
+    background-image: linear-gradient(#000010, #000100);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     font-family: Gilroy;
 }
 
@@ -247,20 +247,10 @@ section.container.l {
                 font-family: Gilroy
             }
         }
-        span#moveLeft {
-            position: absolute;
-            width: 15px;
-            height: 100%;
-            border: 1px solid red
-        }
-        span#moveRight {
-            position: absolute;
-            width: 15px;
-            height: 100%;
-            border: 1px solid #000;
-        }
+
 
     }
+
     .row.d{
         margin-top: 50px;
         .col-lg-3.col-sm-12.col-md-6{
@@ -392,4 +382,22 @@ footer {
     .t-r {
         text-align: center !important;
     }
+    .magic-btn{
+        left: 90% !important; 
+    }
+}
+@media screen and (max-width: 460px) {
+    .magic-btn{
+        left: 80% !important; 
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .magic-btn{
+        height: 100% !important; 
+        left: 97% !important;
+    }   
+    .magic-btn:hover{
+        transform: scale(1.01,1.01) translate(-50%,-50%) !important;
+    }
+
 }
